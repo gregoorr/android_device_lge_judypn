@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/xdroid_judypn.mk
+    $(LOCAL_DIR)/evolution_judypn.mk
 
 COMMON_LUNCH_CHOICES := \
-    xdroid_judypn-userdebug \
-    xdroid_judypn-eng
+    evolution_judypn-userdebug \
+    evolution_judypn-eng
