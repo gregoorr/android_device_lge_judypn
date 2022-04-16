@@ -26,7 +26,7 @@ DEVICE_NAME := judypn
 DEVICE_PACKAGE_OVERLAYS += \
     $(DEVICE_PATH)/overlay \
     $(DEVICE_PATH)/overlay-lineage \
-    $(DEVICE_PATH)/overlay-xdroid
+    $(DEVICE_PATH)/overlay-evolution
 
 # Properties
 TARGET_VENDOR_PROP += $(DEVICE_PATH)/vendor.prop
