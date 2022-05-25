@@ -28,20 +28,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-TARGET_SUPPORTS_QUICK_TAP := true
-EVO_BUILD_TYPE := UNOFFICIAL
+# Inherit some common Corvus stuff
+$(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 1440
+# CorvusOs
+CORVUS_MAINTAINER := gregoorr
+RAVEN_LAIR := Unofficial
+
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
+USE_GAPPS := true
+TARGET_GAPPS_ARCH := arm64
+TARGET_INCLUDE_PIXEL_CHARGER := true
+
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Device identifiers
 
-PRODUCT_NAME := evolution_judypn
+PRODUCT_NAME := corvus_judypn
 PRODUCT_DEVICE := judypn
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
@@ -53,11 +61,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-om-lg
 TARGET_VENDOR_PRODUCT_NAME := judypn_lao_eea
 TARGET_VENDOR_DEVICE_NAME := judypn
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=judypn \
-    PRODUCT_NAME=judypn_lao_eea \
-    PRIVATE_BUILD_DESC="judypn_lao_eea-user 10 QKQ1.191222.002 2021917599e76 release-keys"
-
-BUILD_FINGERPRINT := "lge/judypn_lao_eea/judypn:10/QKQ1.191222.002/2021917599e76:user/release-keys"
 
 
