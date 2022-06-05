@@ -53,11 +53,4 @@ PRODUCT_GMS_CLIENTID_BASE := android-om-lg
 TARGET_VENDOR_PRODUCT_NAME := judypn_lao_eea
 TARGET_VENDOR_DEVICE_NAME := judypn
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    TARGET_DEVICE=judypn \
-    PRODUCT_NAME=judypn_lao_eea \
-    PRIVATE_BUILD_DESC="judypn_lao_eea-user 10 QKQ1.191222.002 2021917599e76 release-keys"
-
-BUILD_FINGERPRINT := "lge/judypn_lao_eea/judypn:10/QKQ1.191222.002/2021917599e76:user/release-keys"
-
 
