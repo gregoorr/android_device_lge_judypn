@@ -32,9 +32,13 @@ $(call inherit-product, device/lge/judypn/device.mk)
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 EVO_BUILD_TYPE := UNOFFICIAL
+TARGET_SUPPORTS_GOOGLE_RECORDER := true
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
+
+# Let it snow!
+BUILD_HOSTNAME := Evolution-X
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
