@@ -43,6 +43,8 @@ USE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_PIXEL_CHARGER := true
 
+USE_PROTON := true
+
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
