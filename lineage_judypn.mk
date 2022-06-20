@@ -35,6 +35,8 @@ TARGET_SUPPORT_FACE_UNLOCK := true
 BUILD_HOSTNAME := crDroid-for U
 BUILD_USERNAME := gregoorr
 
+TARGET_ENABLE_BLUR := true
+
 # Maintainter
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.maintainer.name=gregoorr
