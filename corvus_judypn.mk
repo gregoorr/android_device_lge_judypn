@@ -32,7 +32,6 @@ $(call inherit-product, device/lge/judypn/device.mk)
 $(call inherit-product, vendor/corvus/config/common_full_phone.mk)
 
 # CorvusOs
-CORVUS_MAINTAINER := gregoorr
 RAVEN_LAIR := Unofficial
 
 TARGET_SUPPORTS_QUICK_TAP := true
