@@ -30,6 +30,7 @@ $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 EVO_BUILD_TYPE := UNOFFICIAL
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_ENABLE_BLUR := false
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
