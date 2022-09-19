@@ -22,32 +22,18 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
 
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
-# Inherit some common crDroid stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORT_FACE_UNLOCK := true
-BUILD_HOSTNAME := crDroid-for U
-BUILD_USERNAME := gregoorr
 
 TARGET_ENABLE_BLUR := true
 
-# Compile with PROTON clang
-USE_PROTON := true
-
-# Maintainter
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.maintainer.name=gregoorr
-
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
