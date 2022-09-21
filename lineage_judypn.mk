@@ -22,7 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
@@ -35,6 +34,7 @@ RICE_CHIPSET := SDM845
 WITH_GMS := true
 
 # Maintainer flag
+RICE_MAINTAINER := gregoorr
 RICE_OFFICIAL := false
 
 # Quick tap feature
