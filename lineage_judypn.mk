@@ -26,14 +26,28 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
+# Inherit some common RiceDroid stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
+RICE_CHIPSET := SDM845
+
+# Maintainer flag
+RICE_OFFICIAL := false
+
+# Quick tap feature
 TARGET_SUPPORTS_QUICK_TAP := true
+
+# Face Unlock
 TARGET_SUPPORT_FACE_UNLOCK := true
 
+# Blur
 TARGET_ENABLE_BLUR := true
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
+
+# RiceDroid!
+BUILD_HOSTNAME := RiceDroid
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
