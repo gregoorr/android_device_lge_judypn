@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2022 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -22,9 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-# Installs gsi keys into ramdisk, to boot a GSI with verified boot.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/gsi_keys.mk)
-
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
@@ -36,14 +33,10 @@ RAVEN_LAIR := Unofficial
 
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_FACE_UNLOCK_SUPPORTED := true
-TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
+TARGET_BOOT_ANIMATION_RES := 1440
 USE_GAPPS := true
 TARGET_GAPPS_ARCH := arm64
 TARGET_INCLUDE_PIXEL_CHARGER := true
-
-USE_PROTON := true
-
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
@@ -62,5 +55,6 @@ PRODUCT_GMS_CLIENTID_BASE := android-om-lg
 TARGET_VENDOR_PRODUCT_NAME := judypn_lao_eea
 TARGET_VENDOR_DEVICE_NAME := judypn
 
-
-
+PRODUCT_BUILD_PROP_OVERRIDES += \
+    TARGET_DEVICE=judypn \
+    PRODUCT_NAME=judypn_lao_eea \
