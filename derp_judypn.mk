@@ -25,25 +25,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
-# Inherit some common Evolution X stuff.
-$(call inherit-product, vendor/evolution/config/common_full_phone.mk)
-TARGET_SUPPORTS_QUICK_TAP := true
-EVO_BUILD_TYPE := UNOFFICIAL
-TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_ENABLE_BLUR := false
+# Inherit some common DerpFest stuff.
+$(call inherit-product, vendor/derp/config/common_full_phone.mk)
 
-# Boot animation
+# derpfest flag
 TARGET_BOOT_ANIMATION_RES := 1440
-
-# Let it snow!
-BUILD_HOSTNAME := Evolution-X
+TARGET_GAPPS_ARCH := arm64
+TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_SUPPORT_FACE_UNLOCK := true
+DERP_BUILDTYPE := Unofficial
+BUILD_HOSTNAME := DerpFest-for-U
+BUILD_USERNAME := DerpFest
+WITH_GMS := true
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Device identifiers
 
-PRODUCT_NAME := evolution_judypn
+PRODUCT_NAME := derp_judypn
 PRODUCT_DEVICE := judypn
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
