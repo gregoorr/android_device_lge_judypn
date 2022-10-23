@@ -25,25 +25,25 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
-# Inherit some common DerpFest stuff.
-$(call inherit-product, vendor/derp/config/common_full_phone.mk)
+# Inherit some common Lineage stuff.
+$(call inherit-product, vendor/stag/main.mk)
 
-# derpfest flag
-TARGET_BOOT_ANIMATION_RES := 1440
+# StagOS flag
+TARGET_BOOT_ANIMATION_RES := 1080
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORT_FACE_UNLOCK := true
-DERP_BUILDTYPE := Unofficial
-BUILD_HOSTNAME := DerpFest-for-U
-BUILD_USERNAME := DerpFest
-WITH_GMS := true
+BUILD_TYPE := UNOFFICIAL
+BUILD_HOSTNAME := StagOS-for-U
+BUILD_USERNAME := gregoorr
+WITH_GAPPS := true
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 # Device identifiers
 
-PRODUCT_NAME := derp_judypn
+PRODUCT_NAME := stag_judypn
 PRODUCT_DEVICE := judypn
 PRODUCT_BRAND := lge
 PRODUCT_MANUFACTURER := LGE
