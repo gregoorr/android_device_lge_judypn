@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/derp_judypn.mk
+    $(LOCAL_DIR)/stag_judypn.mk
 
 COMMON_LUNCH_CHOICES := \
-    derp_judypn-userdebug \
-    derp_judypn-eng
+    stag_judypn-userdebug \
+    stag_judypn-eng
