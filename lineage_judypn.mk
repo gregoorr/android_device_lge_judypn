@@ -37,8 +37,6 @@ BUILD_USERNAME := gregoorr
 
 TARGET_ENABLE_BLUR := true
 
-# Compile with PROTON clang
-USE_PROTON := true
 
 # Maintainter
 PRODUCT_PROPERTY_OVERRIDES += \
