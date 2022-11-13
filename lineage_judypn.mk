@@ -22,7 +22,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/product_launched_with_o_mr1.mk
 # Enable updating of APEXes
 $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 
-
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
@@ -33,8 +32,8 @@ TARGET_SUPPORT_FACE_UNLOCK := true
 BUILD_HOSTNAME := crDroid-for U
 BUILD_USERNAME := gregoorr
 
+# Blur
 TARGET_ENABLE_BLUR := true
-
 
 # Maintainter
 PRODUCT_PROPERTY_OVERRIDES += \
@@ -42,8 +41,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
-TARGET_SCREEN_HEIGHT := 3120
-TARGET_SCREEN_WIDTH := 1440
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
