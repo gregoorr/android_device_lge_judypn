@@ -1,4 +1,4 @@
-# Copyright (C) 2019 The LineageOS Project
+# Copyright (C) 2023 SuperiorOS
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -25,22 +25,32 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
-# Inherit some common crDroid stuff.
-$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
+# Inherit some common SuperiorOS stuff.
+$(call inherit-product, vendor/superior/config/common.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORT_FACE_UNLOCK := true
-BUILD_HOSTNAME := crDroid-for U
+BUILD_HOSTNAME := SuperiorOS
 BUILD_USERNAME := gregoorr
+TARGET_BOOT_ANIMATION_RES := 1080
+TARGET_INCLUDE_MATLOG := false
+TARGET_INCLUDE_PIXEL_CHARGER := true
+USE_MOTO_CALCULATOR := true
+SUPERIOR_GAPPS := full
+TARGET_GAPPS_ARCH := arm64
+
+# Supported Device Flags
+TARGET_SUPPORTS_NOW_PLAYING := true
+TARGET_INCLUDE_STOCK_ARCORE := true
+
+# Maintainer Flag (one word only/no spacing)
+SUPERIOR_OFFICIAL := false
+MAINTAINER := gregoorr
+
+# Call recording
+TARGET_SUPPORTS_CALL_RECORDING := true
 
 # Blur
-TARGET_ENABLE_BLUR := true
-
-# Maintainter
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.maintainer.name=gregoorr
-
-# Boot animation
-TARGET_BOOT_ANIMATION_RES := 1440
+TARGET_USES_BLUR := true
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
