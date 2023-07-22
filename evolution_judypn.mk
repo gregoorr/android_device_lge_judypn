@@ -28,15 +28,17 @@ $(call inherit-product, device/lge/judypn/device.mk)
 # Inherit some common Evolution X stuff.
 $(call inherit-product, vendor/evolution/config/common_full_phone.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
+TARGET_FACE_UNLOCK_SUPPORTED := true
 EVO_BUILD_TYPE := UNOFFICIAL
 TARGET_SUPPORTS_GOOGLE_RECORDER := true
-TARGET_ENABLE_BLUR := false
+TARGET_ENABLE_BLUR := true
 
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
-# Let it snow!
+# Let it Evolution-X!
 BUILD_HOSTNAME := Evolution-X
+BUILD_USERNAME := gregoorr
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
