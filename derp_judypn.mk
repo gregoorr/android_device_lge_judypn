@@ -27,16 +27,15 @@ $(call inherit-product, device/lge/judypn/device.mk)
 
 # Inherit some common DerpFest stuff.
 $(call inherit-product, vendor/derp/config/common_full_phone.mk)
-
-# derpfest flag
 TARGET_BOOT_ANIMATION_RES := 1440
 TARGET_GAPPS_ARCH := arm64
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORT_FACE_UNLOCK := true
 DERP_BUILDTYPE := Unofficial
-BUILD_HOSTNAME := DerpFest-for-U
-BUILD_USERNAME := DerpFest
+BUILD_HOSTNAME := DerpFest
+BUILD_USERNAME := gregoorr
 WITH_GMS := true
+TARGET_USES_BLUR := false
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
