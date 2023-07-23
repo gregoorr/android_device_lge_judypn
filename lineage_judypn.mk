@@ -25,17 +25,24 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/updatable_apex.mk)
 # Inherit from judypn device
 $(call inherit-product, device/lge/judypn/device.mk)
 
-# Inherit some common RiceDroid stuff.
+# Inherit some common RisingOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-RICE_CHIPSET := SDM845
-
-# Gapps
+# # Rice stuff/Pixel
+RISING_CHIPSET := SDM845
 WITH_GMS := true
+TARGET_CORE_GMS := false
+TARGET_CORE_GMS_EXTRAS := false
+TARGET_USE_PIXEL_FINGERPRINT := true
+TARGET_USE_GOOGLE_TELEPHONY := true
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+# Package Type
+RISING_PACKAGE_TYPE := Gapps
 
 # Maintainer flag
-RICE_MAINTAINER := gregoorr
-RICE_OFFICIAL := false
+RISING_MAINTAINER := gregoorr
+RISING_OFFICIAL := false
 
 # Quick tap feature
 TARGET_SUPPORTS_QUICK_TAP := true
@@ -50,7 +57,11 @@ TARGET_ENABLE_BLUR := true
 TARGET_BOOT_ANIMATION_RES := 1440
 
 # RiceDroid!
-BUILD_HOSTNAME := RiceDroid
+BUILD_HOSTNAME := RisingOS
+BUILD_USERNAME := gregoorr
+
+# UDFPS ICONS/ANIMATIONS
+TARGET_HAS_UDFPS := false
 
 # Overlays (inherit after vendor/cm to ensure we override it)
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
