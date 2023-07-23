@@ -29,8 +29,9 @@ $(call inherit-product, device/lge/judypn/device.mk)
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 TARGET_SUPPORTS_QUICK_TAP := true
 TARGET_SUPPORT_FACE_UNLOCK := true
-BUILD_HOSTNAME := crDroid-for U
+BUILD_HOSTNAME := crDroid
 BUILD_USERNAME := gregoorr
+TARGET_HAS_UDFPS := false
 
 # Blur
 TARGET_ENABLE_BLUR := true
