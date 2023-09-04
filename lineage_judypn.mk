@@ -39,7 +39,6 @@ RISING_PACKAGE_TYPE := Gapps
 
 # Maintainer flag
 RISING_MAINTAINER := gregoorr
-RISING_OFFICIAL := false
 
 # Quick tap feature
 TARGET_SUPPORTS_QUICK_TAP := true
