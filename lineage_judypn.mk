@@ -25,7 +25,6 @@ $(call inherit-product, device/lge/judypn/device.mk)
 # Inherit some common RisingOS stuff.
 $(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
-# # Rice stuff/Pixel
 RISING_CHIPSET := SDM845
 WITH_GMS := true
 TARGET_CORE_GMS := false
@@ -52,7 +51,7 @@ TARGET_ENABLE_BLUR := true
 # Boot animation
 TARGET_BOOT_ANIMATION_RES := 1440
 
-# RiceDroid!
+# RisingOS!
 BUILD_HOSTNAME := RisingOS
 BUILD_USERNAME := gregoorr
 
