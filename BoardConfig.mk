@@ -16,8 +16,11 @@
 
 DEVICE_PATH := device/lge/judypn
 
+# inherit from the proprietary version
+include vendor/lge/judypn/BoardConfigVendor.mk
+
 # inherit from common v30
--include device/lge/sdm845-common/BoardConfigCommon.mk
+include device/lge/sdm845-common/BoardConfigCommon.mk
 
 # Bluetooth
 BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
@@ -41,5 +44,3 @@ TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
 TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
 TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.judypn
 
-# inherit from the proprietary version
--include vendor/lge/judypn/BoardConfigVendor.mk
