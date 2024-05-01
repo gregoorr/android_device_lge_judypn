@@ -26,7 +26,7 @@ BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := $(DEVICE_PATH)/bluetooth
 TARGET_USES_YCRCB_VENUS_CAMERA_PREVIEW := true
 
 # Kernel
-BOARD_KERNEL_CMDLINE += androidboot.hardware=judypn
+BOARD_KERNEL_CMDLINE += androidboot.hardware=judypn androidboot.fstab_suffix=judypn
 TARGET_KERNEL_CONFIG := lineageos_judypn_defconfig
 
 # Partitions
@@ -36,10 +36,6 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 1073741824
 
 # Platform
 TARGET_SPECIFIC_HEADER_PATH := $(DEVICE_PATH)/include
-
-# Recovery
-TARGET_RECOVERY_WIPE := $(DEVICE_PATH)/recovery/recovery.wipe
-TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/rootdir/etc/fstab.judypn
 
 # inherit from the proprietary version
 -include vendor/lge/judypn/BoardConfigVendor.mk
